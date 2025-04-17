@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 Nomenclatura: Clases, Métodos y Comentarios</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1><i class="fas fa-file-code"></i> Nomenclatura: Clases, Métodos y Comentarios</h1>
+    <p>Convenciones para escribir código limpio y profesional</p>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Sección Clases -->
+  <section class="categoria">
+    <div class="seccion-titulo">
+      <i class="fas fa-cubes"></i>
+      <h2>Clases</h2>
+    </div>
+
+    <div class="lenguaje-card">
+      <div class="lenguaje-header">
+        <i class="fab fa-java"></i>
+        <h3>Java / C#</h3>
+      </div>
+      <div class="contenido-lenguaje">
+                    <pre><code>// PascalCase + sustantivos
+public class UserService {
+    // Campos
+    private int maxAttempts;
+
+    // Constructor
+    public UserService() {...}
+}</code></pre>
+        <ul class="reglas-lista">
+          <li><i class="fas fa-check"></i> Usar <strong>PascalCase</strong> (PrimeraLetraMayúscula)</li>
+          <li><i class="fas fa-check"></i> Nombres deben ser <strong>sustantivos</strong></li>
+          <li><i class="fas fa-check"></i> Evitar prefijos como "C_" o "cls"</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lenguaje-card">
+      <div class="lenguaje-header">
+        <i class="fab fa-python"></i>
+        <h3>Python</h3>
+      </div>
+      <div class="contenido-lenguaje">
+                    <pre><code># PascalCase + sin guiones
+class DatabaseConnection:
+    def __init__(self):
+        self._max_retries = 3  # Variable interna</code></pre>
+        <ul class="reglas-lista">
+          <li><i class="fas fa-check"></i> <strong>PascalCase</strong> aunque el lenguaje acepte snake_case</li>
+          <li><i class="fas fa-check"></i> Para variables internas usar <code>_prefix</code></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Métodos -->
+  <section class="categoria">
+    <div class="seccion-titulo">
+      <i class="fas fa-cogs"></i>
+      <h2>Métodos / Funciones</h2>
+    </div>
+
+    <div class="lenguaje-card">
+      <div class="lenguaje-header">
+        <i class="fab fa-js"></i>
+        <h3>JavaScript</h3>
+      </div>
+      <div class="contenido-lenguaje">
+                    <pre><code>// camelCase + verbo
+function calculateTotal(items) {
+    return items.reduce((sum, item) => sum + item.price, 0);
+}
+
+// Método privado
+function _validateInput(input) {...}</code></pre>
+        <ul class="reglas-lista">
+          <li><i class="fas fa-check"></i> Usar <strong>camelCase</strong></li>
+          <li><i class="fas fa-check"></i> Comenzar con <strong>verbo</strong> (get, calculate, validate)</li>
+          <li><i class="fas fa-check"></i> Métodos privados con <code>_prefix</code></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lenguaje-card">
+      <div class="lenguaje-header">
+        <i class="fab fa-python"></i>
+        <h3>Python</h3>
+      </div>
+      <div class="contenido-lenguaje">
+                    <pre><code># snake_case + verbo
+def calculate_tax(amount):
+    return amount * 0.19
+
+# Método privado
+def _internal_helper():</code></pre>
+        <ul class="reglas-lista">
+          <li><i class="fas fa-check"></i> Usar <strong>snake_case</strong></li>
+          <li><i class="fas fa-check"></i> Verbo + contexto (ej: <code>get_user_by_id</code>)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Comentarios -->
+  <section class="categoria">
+    <div class="seccion-titulo">
+      <i class="fas fa-comments"></i>
+      <h2>Comentarios</h2>
+    </div>
+
+    <div class="lenguaje-card">
+      <div class="lenguaje-header">
+        <i class="fas fa-file-alt"></i>
+        <h3>Documentación</h3>
+      </div>
+      <div class="contenido-lenguaje">
+                    <pre><code>/**
+ * Calcula el impuesto para un producto
+ * @param {number} price - Precio base
+ * @param {string} category - Categoría fiscal
+ * @returns {number} Impuesto calculado
+ */
+function calculateTax(price, category) { ... }</code></pre>
+        <ul class="reglas-lista">
+          <li><i class="fas fa-check"></i> Usar <strong>JSDoc</strong> (JavaScript), <strong>JavaDoc</strong> o <strong>docstrings</strong> (Python)</li>
+          <li><i class="fas fa-check"></i> Documentar parámetros, retorno y propósito</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lenguaje-card">
+      <div class="lenguaje-header">
+        <i class="fas fa-code"></i>
+        <h3>Comentarios de Línea</h3>
+      </div>
+      <div class="contenido-lenguaje">
+                    <pre><code># MAL: Explica QUÉ hace (redundante)
+x = x + 1  # Incrementa x en 1
+
+# BIEN: Explica POR QUÉ
+x = x + 1  # Ajuste por desfase horario UTC</code></pre>
+        <ul class="reglas-lista">
+          <li><i class="fas fa-check"></i> Evitar comentarios obvios</li>
+          <li><i class="fas fa-check"></i> Explicar "por qué" no "qué"</li>
+          <li><i class="fas fa-check"></i> Máximo 1 línea cada 10 de código</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Anti-patrones -->
+  <section class="anti-patrones">
+    <div class="seccion-titulo">
+      <i class="fas fa-exclamation-triangle"></i>
+      <h2>Anti-patrones Comunes</h2>
+    </div>
+
+    <div class="grid-anti-patrones">
+      <div class="anti-patron">
+        <h4><i class="fas fa-times"></i> Nombres genéricos</h4>
+        <p><code>class Handler</code>, <code>function process()</code></p>
+        <p class="solucion">Solución: <code>PaymentProcessor</code>, <code>validateUserCredentials()</code></p>
+      </div>
+
+      <div class="anti-patron">
+        <h4><i class="fas fa-times"></i> Notación inconsistente</h4>
+        <p><code>class user_manager</code> (Python con snake_case)</p>
+        <p class="solucion">Solución: <code>class UserManager</code> (PascalCase)</p>
+      </div>
+
+      <div class="anti-patron">
+        <h4><i class="fas fa-times"></i> Comentarios obsoletos</h4>
+        <p>Código modificado sin actualizar comentarios</p>
+        <p class="solucion">Solución: Eliminar o actualizar con cada cambio</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2024 - Guía de Nomenclatura Avanzada | <i class="fas fa-heart"></i> Para código profesional</p>
+    <div class="herramientas">
+      <p>Herramientas recomendadas:</p>
+      <a href="https://tsdoc.org/" target="_blank">TSDoc</a>
+      <a href="https://www.sphinx-doc.org/" target="_blank">Sphinx</a>
+      <a href="https://pdoc3.github.io/pdoc/" target="_blank">pdoc</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

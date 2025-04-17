@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚀 Estándares de Codificación</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1><i class="fas fa-code"></i> Estándares de Codificación</h1>
+    <p>Buenas prácticas para escribir código limpio y mantenible</p>
+  </div>
+</header>
+
+<main class="container">
+  <section class="definicion">
+    <div class="seccion-titulo">
+      <i class="fas fa-book"></i>
+      <h2>¿Qué son los estándares de codificación?</h2>
+    </div>
+    <div class="tarjeta">
+      <p>Son <strong>conjuntos de reglas y convenciones</strong> que definen cómo escribir y organizar el código en un proyecto. Estos estándares ayudan a:</p>
+      <ul>
+        <li>Mantener <strong>consistencia</strong> en el código</li>
+        <li>Facilitar el <strong>trabajo en equipo</strong></li>
+        <li>Mejorar la <strong>legibilidad</strong> y mantenibilidad</li>
+        <li>Reducir <strong>errores</strong> comunes</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="tipos">
+    <div class="seccion-titulo">
+      <i class="fas fa-clipboard-list"></i>
+      <h2>Tipos de Estándares</h2>
+    </div>
+    <div class="grid-estandares">
+      <!-- Estándar 1 -->
+      <div class="estandar-card">
+        <div class="icono-estandar">
+          <i class="fas fa-file-signature"></i>
+        </div>
+        <h3>Nomenclatura</h3>
+        <ul>
+          <li><strong>Variables:</strong> camelCase (JavaScript) o snake_case (Python)</li>
+          <li><strong>Clases:</strong> PascalCase</li>
+          <li><strong>Constantes:</strong> MAYÚSCULAS_CON_GUIONES</li>
+        </ul>
+      </div>
+
+      <!-- Estándar 2 -->
+      <div class="estandar-card">
+        <div class="icono-estandar">
+          <i class="fas fa-indent"></i>
+        </div>
+        <h3>Formato</h3>
+        <ul>
+          <li><strong>Indentación:</strong> 2 o 4 espacios (no tabs)</li>
+          <li><strong>Línea máxima:</strong> 80-120 caracteres</li>
+          <li><strong>Llaves:</strong> Mismo estilo en todo el proyecto</li>
+        </ul>
+      </div>
+
+      <!-- Estándar 3 -->
+      <div class="estandar-card">
+        <div class="icono-estandar">
+          <i class="fas fa-comment"></i>
+        </div>
+        <h3>Comentarios</h3>
+        <ul>
+          <li><strong>Documentación:</strong> Usar JSDoc, JavaDoc, etc.</li>
+          <li><strong>Comentarios de línea:</strong> Explicar "por qué" no "qué"</li>
+          <li><strong>Eliminar:</strong> Código comentado obsoleto</li>
+        </ul>
+      </div>
+
+      <!-- Estándar 4 -->
+      <div class="estandar-card">
+        <div class="icono-estandar">
+          <i class="fas fa-sitemap"></i>
+        </div>
+        <h3>Estructura</h3>
+        <ul>
+          <li><strong>Organización:</strong> MVC, Componentes, etc.</li>
+          <li><strong>Archivos:</strong> Nombre descriptivo y extensión correcta</li>
+          <li><strong>Jerarquía:</strong> Directorios lógicos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="ejemplos">
+    <div class="seccion-titulo">
+      <i class="fas fa-code"></i>
+      <h2>Ejemplos Prácticos</h2>
+    </div>
+    <div class="ejemplos-container">
+      <div class="lenguaje">
+        <h3><i class="fab fa-js"></i> JavaScript</h3>
+        <pre><code>// MAL
+function getuserdata(){...}
+
+// BIEN (camelCase)
+function getUserData() {...}
+
+// Constantes
+const MAX_USERS = 10;</code></pre>
+      </div>
+
+      <div class="lenguaje">
+        <h3><i class="fab fa-python"></i> Python</h3>
+        <pre><code># MAL
+def CalculateTotal():...
+
+# BIEN (snake_case)
+def calculate_total():...
+
+# Constantes
+MAX_CONNECTIONS = 5</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="beneficios">
+    <div class="seccion-titulo">
+      <i class="fas fa-chart-line"></i>
+      <h2>Beneficios Clave</h2>
+    </div>
+    <div class="beneficios-grid">
+      <div class="beneficio">
+        <i class="fas fa-users"></i>
+        <h3>Colaboración</h3>
+        <p>Todo el equipo sigue las mismas reglas</p>
+      </div>
+      <div class="beneficio">
+        <i class="fas fa-bug"></i>
+        <h3>Menos Errores</h3>
+        <p>Patrones consistentes reducen bugs</p>
+      </div>
+      <div class="beneficio">
+        <i class="fas fa-rocket"></i>
+        <h3>Onboarding Rápido</h3>
+        <p>Nuevos devs entienden el código fácilmente</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2024 - Estándares de Codificación | Hecho con <i class="fas fa-heart"></i> para desarrolladores</p>
+    <div class="herramientas-recomendadas">
+      <p>Herramientas para aplicar estándares:</p>
+      <div class="herramientas">
+        <a href="https://eslint.org/" target="_blank">ESLint</a>
+        <a href="https://prettier.io/" target="_blank">Prettier</a>
+        <a href="https://editorconfig.org/" target="_blank">EditorConfig</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
